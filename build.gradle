@@ -1,0 +1,19 @@
+plugins {
+  id "org.web3j.openapi" version "4.8.3"
+}
+
+group 'io.loopring.exchange'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+// For more options, check: https://github.com/web3j/web3j-openapi-gradle-plugin
+web3j {
+    generatedPackageName = 'io.loopring.exchange'
+    addressBitLength = 160
+    openapi {
+        contextPath = 'LoopringDex'
+    }
+}
